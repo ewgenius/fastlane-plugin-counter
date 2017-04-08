@@ -1,4 +1,5 @@
 # coding: utf-8
+
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fastlane/plugin/counter/version'
@@ -6,10 +7,10 @@ require 'fastlane/plugin/counter/version'
 Gem::Specification.new do |spec|
   spec.name          = 'fastlane-plugin-counter'
   spec.version       = Fastlane::Counter::VERSION
-  spec.author        = %q{Evgeniy Khramkov}
-  spec.email         = %q{ewgeniux@gmail.com}
+  spec.author        = 'Evgeniy Khramkov'
+  spec.email         = 'ewgeniux@gmail.com'
 
-  spec.summary       = %q{increment and decrement counter}
+  spec.summary       = 'increment and decrement counter'
   # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-counter"
   spec.license       = "MIT"
 
