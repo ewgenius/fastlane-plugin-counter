@@ -1,8 +1,16 @@
+require 'uri'
+require 'net/http'
+
 module Fastlane
   module Actions
     class CounterAction < Action
       def self.run(params)
         UI.message("The counter plugin is working!")
+        url = URI.parse("https://fastlane-counter-service.herokuapp.com/counter/1/increment")
+        req = Net::HTTP.new(url.host, url.port)
+        req.use_ssl = true
+        res = req.post(url.path, {}.to_json, { "Content-Type" => "application/json" })
+        puts res.body
       end
 
       def self.description
