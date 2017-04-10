@@ -13,20 +13,22 @@ module Fastlane
         UI.message("Hello from the counter plugin helper!")
       end
 
-      def self.increment_conuter(id)
-        url = URI.parse("#{@api_url}/counter/#{id}/increment")
+      def self.counter_request(id, action)
+        url = URI.parse("#{@api_url}/counter/#{id}/#{action}")
         req = Net::HTTP.new(url.host, url.port)
         req.use_ssl = true
         res = req.post(url.path, {}.to_json, { "Content-Type" => "application/json" })
-        puts res.body
+        JSON.parse(res.body)
+      end
+
+      def self.increment_conuter(id)
+        self.counter_request(id, "increment")
+        # UI.message(res.to_s)
       end
 
       def self.decrement_conuter(id)
-        url = URI.parse("#{@api_url}/counter/#{id}/decrement")
-        req = Net::HTTP.new(url.host, url.port)
-        req.use_ssl = true
-        res = req.post(url.path, {}.to_json, { "Content-Type" => "application/json" })
-        puts res.body
+        self.counter_request(id, "increment")
+        # UI.message(res.to_s)
       end
     end
   end
