@@ -1,8 +1,8 @@
 module Fastlane
   module Actions
-    class IncrementAction < Action
+    class DecrementAction < Action
       def self.run(params)
-        UI.message("Decrement counter with id")
+        UI.message("Decrement counter")
         Helper::CounterHelper.decrement_conuter(1)
       end
 
