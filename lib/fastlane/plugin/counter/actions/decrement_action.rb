@@ -12,7 +12,7 @@ module Fastlane
 
       def self.authors
         ["Evgeniy Khramkov"]
-     end
+      end
 
       def self.return_value
         # If your method provides a return value, you can describe here what it does

@@ -2,7 +2,7 @@ module Fastlane
   module Actions
     class IncrementAction < Action
       def self.run(params)
-        UI.message("Increment counter with id")
+        UI.message("Increment counter")
         Helper::CounterHelper.increment_conuter(1)
       end
 
@@ -12,7 +12,7 @@ module Fastlane
 
       def self.authors
         ["Evgeniy Khramkov"]
-     end
+      end
 
       def self.return_value
         # If your method provides a return value, you can describe here what it does

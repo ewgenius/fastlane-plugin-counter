@@ -1,7 +1,6 @@
 require 'uri'
 require 'net/http'
 
-
 module Fastlane
   module Helper
     class CounterHelper
