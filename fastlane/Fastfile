@@ -1,5 +1,4 @@
 lane :test do
-  counter
   decrement(id: 1)
   increment(id: 2)
 end
