@@ -4,7 +4,7 @@ describe Fastlane::Actions::DecrementAction do
       # expect(Fastlane::UI).to receive(:message).with("Decrement counter")
 
       Fastlane::Actions::DecrementAction.run(
-        id: 2
+        id: "2"
       )
     end
   end

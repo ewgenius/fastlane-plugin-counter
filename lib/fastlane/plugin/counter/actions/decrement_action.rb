@@ -30,7 +30,7 @@ module Fastlane
                                   env_name: "COUNTER_ID",
                                description: "Counter id to decrement",
                                   optional: false,
-                                      type: Numeric)
+                                      type: String)
         ]
       end
 

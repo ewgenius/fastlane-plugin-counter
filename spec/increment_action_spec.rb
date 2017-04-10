@@ -4,7 +4,7 @@ describe Fastlane::Actions::IncrementAction do
       # expect(Fastlane::UI).to receive(:message).with("Increment counter")
 
       Fastlane::Actions::IncrementAction.run(
-        id: 1
+        id: "1"
       )
     end
   end
