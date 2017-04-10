@@ -3,9 +3,6 @@ module Fastlane
     class CounterAction < Action
       def self.run(params)
         UI.message("The counter plugin is working!")
-
-        Helper::CounterHelper.increment_conuter(1)
-        Helper::CounterHelper.decrement_conuter(10)
       end
 
       def self.description

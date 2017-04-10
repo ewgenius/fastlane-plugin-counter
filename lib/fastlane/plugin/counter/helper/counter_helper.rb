@@ -27,7 +27,7 @@ module Fastlane
       end
 
       def self.decrement_conuter(id)
-        self.counter_request(id, "increment")
+        self.counter_request(id, "decrement")
         # UI.message(res.to_s)
       end
     end

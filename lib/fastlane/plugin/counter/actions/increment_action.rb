@@ -3,7 +3,8 @@ module Fastlane
     class IncrementAction < Action
       def self.run(params)
         UI.message("Increment counter")
-        Helper::CounterHelper.increment_conuter(1)
+        res = Helper::CounterHelper.increment_conuter(params[:id])
+        UI.message("Incremented counter##{res['id']} to #{res['result']}")
       end
 
       def self.description
@@ -25,11 +26,11 @@ module Fastlane
 
       def self.available_options
         [
-          # FastlaneCore::ConfigItem.new(key: :your_option,
-          #                         env_name: "COUNTER_YOUR_OPTION",
-          #                      description: "A description of your option",
-          #                         optional: false,
-          #                             type: String)
+          FastlaneCore::ConfigItem.new(key: :id,
+                                  env_name: "COUNTER_ID",
+                               description: "Counter id to increment",
+                                  optional: false,
+                                      type: Numeric)
         ]
       end
 

@@ -1,9 +1,11 @@
 describe Fastlane::Actions::IncrementAction do
   describe '#run' do
-    it 'decrements counter' do
-      expect(Fastlane::UI).to receive(:message).with("Increment counter")
+    it 'increments counter' do
+      # expect(Fastlane::UI).to receive(:message).with("Increment counter")
 
-      Fastlane::Actions::IncrementAction.run(nil)
+      Fastlane::Actions::IncrementAction.run(
+        id: 1
+      )
     end
   end
 end
