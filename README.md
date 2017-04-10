@@ -1,6 +1,8 @@
 # counter plugin
 
+[![Build Status](https://travis-ci.org/ewgenius/fastlane-plugin-counter.svg?branch=master)](https://travis-ci.org/ewgenius/fastlane-plugin-counter)
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-counter)
+
 
 ## Getting Started
 
